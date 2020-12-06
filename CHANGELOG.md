@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v4.0.0 (2020-12-06)
+### Breaking
+* This reverts commit f6d2e8424ca4ca8f94d2cbcd27c979325129413b.  ([`09891cc`](https://github.com/jkuball/SemanticReleaseTest/commit/09891ccf2a22d012a0c0d94f43ce4a4527cfc3e8))
+
+### :boom:
+* Revert "new release pipeline :boom:" ([`09891cc`](https://github.com/jkuball/SemanticReleaseTest/commit/09891ccf2a22d012a0c0d94f43ce4a4527cfc3e8))
+
+### Other
+* Switch back to old changelog 🔧  ([`365e92c`](https://github.com/jkuball/SemanticReleaseTest/commit/365e92cfc95d35599e57eeb2150618792b72bb0e))
+
 ## v3.0.2 (2020-12-06)
 
 
