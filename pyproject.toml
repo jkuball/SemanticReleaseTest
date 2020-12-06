@@ -1,4 +1,0 @@
-[tool.semantic_release]
-version_variable = [
-    'test/__init__.py:__version__',
-]
