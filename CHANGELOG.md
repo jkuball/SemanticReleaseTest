@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v3.0.2 (2020-12-06)
+
+
+| Type | Change |
+| --- | --- |
+
 ## v3.0.1 (2020-12-06)
 
 
