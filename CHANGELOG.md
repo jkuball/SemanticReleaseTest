@@ -2,6 +2,9 @@
 
 <!--next-version-placeholder-->
 
+## v2.1.0 (2020-12-06)
+
+
 ## v2.0.0 (2020-12-06)
 ### Breaking
 * update emoji-parser to understand uft-8 (?) 💥  ([`cb723ec`](https://github.com/jkuball/SemanticReleaseTest/commit/cb723ec5dd4ddf6b3a546d6d22e895942f86626a))
