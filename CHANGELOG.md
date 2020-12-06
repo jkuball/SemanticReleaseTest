@@ -2,6 +2,18 @@
 
 <!--next-version-placeholder-->
 
+## v3.0.0 (2020-12-06)
+### Breaking
+* new release pipeline :boom:  ([`f6d2e84`](https://github.com/jkuball/SemanticReleaseTest/commit/f6d2e8424ca4ca8f94d2cbcd27c979325129413b))
+
+### :boom:
+* New release pipeline :boom:  ([`f6d2e84`](https://github.com/jkuball/SemanticReleaseTest/commit/f6d2e8424ca4ca8f94d2cbcd27c979325129413b))
+
+| Type | Change |
+| --- | --- |
+| Breaking | new release pipeline :boom:  ([`f6d2e84`](https://github.com/jkuball/SemanticReleaseTest/commit/f6d2e8424ca4ca8f94d2cbcd27c979325129413b)) |
+| :Boom: | New release pipeline :boom:  ([`f6d2e84`](https://github.com/jkuball/SemanticReleaseTest/commit/f6d2e8424ca4ca8f94d2cbcd27c979325129413b)) |
+
 ## v2.1.1 (2020-12-06)
 
 
