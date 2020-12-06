@@ -26,5 +26,9 @@ jobs:
 
       - name: Release semantically
         run: |
-          semantic-release publish
+          export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          git config --global user.name "github-actions"
+          git config --global user.email "action@github.com"
+          python -m semantic_release.cli publish -v DEBUG \
+              -D commit_author="github-actions <action@github.com>"
 
