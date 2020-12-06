@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.4 (2020-12-06)
+### Other
+* Update semantic-release.yml 🔧  ([`efed3dd`](https://github.com/jkuball/SemanticReleaseTest/commit/efed3ddf0ff376b2fe410eb25f4efc04983487e1))
+* Update semantic-release.yaml 🔧  ([`f5c0ee6`](https://github.com/jkuball/SemanticReleaseTest/commit/f5c0ee698765617e0c33ff10ecd3ccd2af7ac0dd))
+
 ## v0.0.3 (2020-12-06)
 ### Other
 * Update setup.cfg 🔧  ([`eca9361`](https://github.com/jkuball/SemanticReleaseTest/commit/eca9361b2834c149b74294123a30b41a83d77912))
