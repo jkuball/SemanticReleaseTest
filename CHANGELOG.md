@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.3 (2020-12-06)
+### Other
+* Update setup.cfg 🔧  ([`eca9361`](https://github.com/jkuball/SemanticReleaseTest/commit/eca9361b2834c149b74294123a30b41a83d77912))
+
 ## v0.0.2 (2020-12-06)
 ### Other
 * Update semantic release config 🔧  ([`15aeb11`](https://github.com/jkuball/SemanticReleaseTest/commit/15aeb11d19f65aa34bc90b6433a422597085a845))
