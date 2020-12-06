@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.7 (2020-12-06)
+### Other
+* Use argument parser 🎨  ([`4a08637`](https://github.com/jkuball/SemanticReleaseTest/commit/4a086376ddaed50e717240fbd95e3c4c1035ddad))
+
 ## v0.0.6 (2020-12-06)
 ### Other
 * Remove testing from workflow 🐛  ([`8859629`](https://github.com/jkuball/SemanticReleaseTest/commit/885962999f7e8956dc3d50985ce3f56d4f783232))
