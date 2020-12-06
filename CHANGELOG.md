@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.8 (2020-12-06)
+### Other
+* Use the version under setup  ([`afcb9e0`](https://github.com/jkuball/SemanticReleaseTest/commit/afcb9e0e7e048aae938528531b7c273697832984))
+
 ## v0.0.7 (2020-12-06)
 ### Other
 * Use argument parser 🎨  ([`4a08637`](https://github.com/jkuball/SemanticReleaseTest/commit/4a086376ddaed50e717240fbd95e3c4c1035ddad))
