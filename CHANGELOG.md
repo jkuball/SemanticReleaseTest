@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.6 (2020-12-06)
+### Other
+* Remove testing from workflow 🐛  ([`8859629`](https://github.com/jkuball/SemanticReleaseTest/commit/885962999f7e8956dc3d50985ce3f56d4f783232))
+* Should be done with github workflow 💥  ([`db83520`](https://github.com/jkuball/SemanticReleaseTest/commit/db83520eaef77d4c499479d1588f89d3598d3caf))
+
 ## v0.0.5 (2020-12-06)
 ### Other
 * Fix a whoopsie 🐛  ([`f61cdd8`](https://github.com/jkuball/SemanticReleaseTest/commit/f61cdd88471e6e3658c76afad9fec8419ed4b6f8))
