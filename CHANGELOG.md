@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.5 (2020-12-06)
+### Other
+* Fix a whoopsie 🐛  ([`f61cdd8`](https://github.com/jkuball/SemanticReleaseTest/commit/f61cdd88471e6e3658c76afad9fec8419ed4b6f8))
+
 ## v0.0.4 (2020-12-06)
 ### Other
 * Update semantic-release.yml 🔧  ([`efed3dd`](https://github.com/jkuball/SemanticReleaseTest/commit/efed3ddf0ff376b2fe410eb25f4efc04983487e1))
