@@ -1,9 +1,7 @@
-import sys
+from argparse import ArgumentParser
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        name = sys.argv[1]
-    else:
-        name = "World"
-
-    print(f"Hello, {name}!")
+    parser = ArgumentParser()
+    parser.add_arg('name', default='World')
+    args = parser.parse_args()
+    print(f"Hello, {args.name}!")
