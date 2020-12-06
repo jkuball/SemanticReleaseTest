@@ -26,12 +26,14 @@ jobs:
 
       - name: Release semantically
         run: |
-            git config --global user.name "JUST ADD AI"
-            git config --global user.email "jaai@justadd.ai"
+            git config --global user.name "${COMMITER_NAME}"
+            git config --global user.email "${COMMITER_EMAIL}"
             python -m semantic_release.cli publish -v DEBUG \
-                -D commit_author="JUST ADD AI <jaai@justadd.ai>"
+                -D commit_author="${COMMITER_NAME} <{$COMMITER_EMAIL}>"
         env:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            COMMITER_NAME: github-actions
+            COMMITER_EMAIL: action@github.com
 
       - name: Upload to JYPI
         uses: pypa/gh-action-pypi-publish@master
