@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.9 (2020-12-06)
+### Other
+* Change gitignore, totally breaking changes 💥  ([`7148195`](https://github.com/jkuball/SemanticReleaseTest/commit/7148195502a9a2fc2999b10ab96c585dd365e6a7))
+
 ## v0.0.8 (2020-12-06)
 ### Other
 * Use the version under setup  ([`afcb9e0`](https://github.com/jkuball/SemanticReleaseTest/commit/afcb9e0e7e048aae938528531b7c273697832984))
