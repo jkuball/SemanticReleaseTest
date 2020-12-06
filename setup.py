@@ -1,8 +1,10 @@
 import setuptools
 
+from test import __version__
+
 setuptools.setup(
     name="Test", # Replace with your own username
-    version="0.0.1",
+    version=__version__,
     author="Example Author",
     author_email="author@example.com",
     description="A small example package",
