@@ -24,11 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install green twine
 
-      - name: Test
-        run: |
-          green -vvv
-
-      - name: Python Semantic Release
+      - name: Release semantically
         uses: relekang/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
