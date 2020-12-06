@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.0 (2020-12-06)
+### Breaking
+* Test emoji-parser :boom:  ([`4b5fe33`](https://github.com/jkuball/SemanticReleaseTest/commit/4b5fe33887969a86b691b93c2005259c3e7011a8))
+
+### :boom:
+* Test emoji-parser :boom:  ([`4b5fe33`](https://github.com/jkuball/SemanticReleaseTest/commit/4b5fe33887969a86b691b93c2005259c3e7011a8))
+
 ## v0.0.9 (2020-12-06)
 ### Other
 * Change gitignore, totally breaking changes 💥  ([`7148195`](https://github.com/jkuball/SemanticReleaseTest/commit/7148195502a9a2fc2999b10ab96c585dd365e6a7))
