@@ -23,13 +23,12 @@ jobs:
           python -m pip install python-semantic-release
       - name: Release semantically
         run: |
+          export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          export GITHUB_ACTOR=x-access-token
           git config --global user.name "github-actions"
           git config --global user.email "action@github.com"
           python -m semantic_release.cli publish -v DEBUG \
             -D commit_author="github-actions <action@github.com>"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_ACTOR: x-access-token
 
 #       - name: Release semantically
 #         uses: relekang/python-semantic-release@master
