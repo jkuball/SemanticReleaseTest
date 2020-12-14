@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v5.0.0 (2020-12-14)
+### Other
+* Wops  ([`54903b5`](https://github.com/jkuball/SemanticReleaseTest/commit/54903b51d37bbb03830a6427db7937ca98f2cf1d))
+* Can i release like that?  ([`6afe850`](https://github.com/jkuball/SemanticReleaseTest/commit/6afe8504d6b21c651fb487770ae5ddf8466f2246))
+* Can i change the actor like that?  ([`993360c`](https://github.com/jkuball/SemanticReleaseTest/commit/993360c54af518b799de1f910a0c44e50aa0a46e))
+
 ## v4.0.0 (2020-12-06)
 ### Breaking
 * This reverts commit f6d2e8424ca4ca8f94d2cbcd27c979325129413b.  ([`09891cc`](https://github.com/jkuball/SemanticReleaseTest/commit/09891ccf2a22d012a0c0d94f43ce4a4527cfc3e8))
