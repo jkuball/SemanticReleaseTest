@@ -31,11 +31,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: x-access-token
 
-      # - name: Release semantically
-      #   uses: relekang/python-semantic-release@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     github_actor: x-access-token
-      #   env:
-      #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     GITHUB_ACTOR: x-access-token
+#       - name: Release semantically
+#         uses: relekang/python-semantic-release@master
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           github_actor: x-access-token
+#         env:
+#           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           GITHUB_ACTOR: x-access-token
+#
