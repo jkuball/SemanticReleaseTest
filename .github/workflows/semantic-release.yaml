@@ -20,7 +20,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install semantic_release
+          python -m pip install python-semantic-release
       - name: Release semantically
         run: |
           git config --global user.name "github-actions"
