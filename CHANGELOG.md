@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v5.0.1 (2020-12-16)
+### Other
+* Test  ([`ce0d6b6`](https://github.com/jkuball/SemanticReleaseTest/commit/ce0d6b68f0ba942d79fa36d80f6153549366f2fb))
+* Germanize  ([`505f768`](https://github.com/jkuball/SemanticReleaseTest/commit/505f76883eff522cebbd342beb67882ee70b2136))
+* Changed  ([`02974ac`](https://github.com/jkuball/SemanticReleaseTest/commit/02974ace5c45356372200111242bed01a752e869))
+* Change  ([`4fc5093`](https://github.com/jkuball/SemanticReleaseTest/commit/4fc509305dbc1554a54b3268063f58b0bbf1100d))
+
 ## v5.0.0 (2020-12-14)
 ### Other
 * Wops  ([`54903b5`](https://github.com/jkuball/SemanticReleaseTest/commit/54903b51d37bbb03830a6427db7937ca98f2cf1d))
