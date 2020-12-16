@@ -29,6 +29,6 @@ jobs:
           false
 
       - name: Test 3
-        if: always() && ${{ github.event_name == 'push' }}
+        if: always()
         run: |
           echo WORKS
