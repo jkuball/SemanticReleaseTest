@@ -37,7 +37,7 @@ jobs:
           script: |
             github.git.createTag({
               owner: "jkuball",
-              repo: "SemanticReleaseTest"
+              repo: "SemanticReleaseTest",
               tag: "latest",
               message: "Latest build",
               object: context.sha,
