@@ -35,4 +35,4 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(github)
+            console.log(github.git.createTag)
