@@ -6,18 +6,29 @@ on:
       - master
 
 jobs:
-  release:
-    runs-on: ubuntu-latest
-
+  check_tag:
+    outputs:
+    status: ${{ steps.*.conclusion }}
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      # - name: Check for existing tag
-      #   run: |
-      #     [ ! -z ] && echo Tag already exist  && false
+      - id: check_tag
+        name: Check if tag already exists at the current commit
+        run: |
+          if [ ! -z "`git tag -l nightly`" ]; then
+            sha=`git rev-parse nightly`
+            if [ "$sha" == "${{ github.sha }}" ]; then
+              echo "Tag already exists on the commit that triggered this workflow."
+              exit -1
+            fi
+          fi
 
+  build_and_tag:
+    needs: check_tag
+    if: !contains(needs.check_tag.outputs.status , 'failure')
+    steps:
       - name: Build
         run: |
           echo This should run if the current commit is not already tagged
@@ -26,5 +37,5 @@ jobs:
       - name: Tag
         run: |
           [ ! -z "`git tag -l nightly`" ] && git tag -d nightly
-          git tag -am "Latest nightly build from `date`" nightly
+          git tag nightly
           git push origin nightly
