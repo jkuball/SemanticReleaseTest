@@ -25,6 +25,6 @@ jobs:
       # should tag the current commit because the build ran and the commit wasn't already tagged
       - name: Tag
         run: |
-          [ -z "`git tag -l nightly`" ] && git tag -d nightly
+          [ ! -z "`git tag -l nightly`" ] && git tag -d nightly
           git tag nightly
           git push origin nightly
