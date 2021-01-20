@@ -8,7 +8,7 @@ on:
 jobs:
   check_tag:
     outputs:
-    status: ${{ steps.*.conclusion }}
+      status: ${{ steps.*.conclusion }}
     steps:
       - uses: actions/checkout@v2
         with:
