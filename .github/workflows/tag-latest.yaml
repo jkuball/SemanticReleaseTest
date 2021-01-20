@@ -2,7 +2,7 @@ name: tag latest
 
 on:
   schedule:
-    - cron: '0/5 * * * *'
+    - cron: '1 * * * *'
   push:
     branches:
       - master
@@ -11,26 +11,29 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    outputs:
+      conclusion: ${{ steps.tag.outputs.conclusion }}
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - id: check_tag
+      - id: tag
         name: Check if tag already exists at the current commit
         run: |
           if [ ! -z "`git tag -l nightly`" ]; then
             sha=`git rev-parse nightly`
             if [ "$sha" == "${{ github.sha }}" ]; then
               echo "Tag already exists on the commit that triggered this workflow."
-              exit -1
+              echo ::set-output name=conclusion::failure
             fi
           fi
+          echo ::set-output name=conclusion::success
 
   build_and_tag:
     needs: check
     runs-on: ubuntu-latest
-    if: needs.check.result == 'success'
+    if: needs.check.output.conclusion == 'success'
     steps:
       - uses: actions/checkout@v2
         with:
