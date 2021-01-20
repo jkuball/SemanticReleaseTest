@@ -25,9 +25,9 @@ jobs:
           fi
 
   build_and_tag:
-    needs: check_tag
+    needs: check
     runs-on: ubuntu-latest
-    if: needs.check_tag.result == 'success'
+    if: needs.check.result == 'success'
     steps:
       - uses: actions/checkout@v2
         with:
