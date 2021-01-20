@@ -26,5 +26,5 @@ jobs:
       - name: Tag
         run: |
           [ ! -z "`git tag -l nightly`" ] && git tag -d nightly
-          git tag nightly
+          git tag -am "Latest nightly build from `date`" nightly
           git push origin nightly
