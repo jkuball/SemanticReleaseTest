@@ -43,4 +43,4 @@ jobs:
                 message: "Latest build",
                 object: ${{ github.sha }},
                 type: "commit"
-          });
+            });
