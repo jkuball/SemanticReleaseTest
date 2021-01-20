@@ -3,6 +3,10 @@ name: tag latest
 on:
   schedule:
     - cron: '40 0 * * *'
+  push:
+    branches:
+      - master
+
 
 jobs:
   check:
