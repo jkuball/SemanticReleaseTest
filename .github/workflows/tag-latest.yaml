@@ -10,36 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - uses: actions/checkout@v2
-      #   with:
-      #     fetch-depth: 0
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-      # # should explode if the current commit is already tagged
-      # - uses: actions/github-script@v3
-      #   with:
-      #     github-token: ${{secrets.GITHUB_TOKEN}}
-      #     script: |
-      #       github.issues.createComment({
-      #         issue_number: context.issue.number,
-      #         owner: context.repo.owner,
-      #         repo: context.repo.repo,
-      #         body: '👋 Thanks for reporting!'
-      #       })
+      # - name: Check for existing tag
+      #   run: |
+      #     [ ! -z ] && echo Tag already exist  && false
 
       - name: Build
         run: |
           echo This should run if the current commit is not already tagged
 
       # should tag the current commit because the build ran and the commit wasn't already tagged
-      - uses: actions/github-script@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.git.createTag({
-              owner: context.repository_owner,
-              repo: context.repository.split("/")[1],
-              tag: "latest",
-              message: "Latest build",
-              object: context.sha,
-              type: "commit",
-            })
+      - name: Tag
+        run: |
+          [ -z "`git tag -l nightly`" ] && git tag -d nightly
+          git tag nightly
+          git push origin nightly
