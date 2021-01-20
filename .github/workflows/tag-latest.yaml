@@ -2,7 +2,7 @@ name: tag latest
 
 on:
   schedule:
-    - cron: '40 0 * * *'
+    - cron: '45 0 * * *'
   push:
     branches:
       - master
@@ -43,6 +43,6 @@ jobs:
       # should tag the current commit because the build ran and the commit wasn't already tagged
       - name: Tag
         run: |
-          [ ! -z "`git tag -l nightly`" ] && git tag -d nightly
+          [ ! -z "`git tag -l nightly`" ] && git tag -d nightly && git push --delete origin nightly
           git tag nightly
           git push origin nightly
