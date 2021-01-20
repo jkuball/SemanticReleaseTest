@@ -6,10 +6,8 @@ on:
       - master
 
 jobs:
-  check_tag:
+  check:
     runs-on: ubuntu-latest
-    outputs:
-      status: ${{ steps.*.conclusion }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -29,7 +27,7 @@ jobs:
   build_and_tag:
     needs: check_tag
     runs-on: ubuntu-latest
-    if: !contains(needs.check_tag.outputs.status , 'failure')
+    if: needs.check_tag.result == 'success'
     steps:
       - uses: actions/checkout@v2
         with:
