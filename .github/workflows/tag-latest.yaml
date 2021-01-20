@@ -2,7 +2,7 @@ name: tag latest
 
 on:
   schedule:
-    - cron: '48 * * * *'
+    - cron: '0/5 * * * *'
   push:
     branches:
       - master
