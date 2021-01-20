@@ -35,7 +35,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(github)
+            console.log(github);
             github.gitdata.createTag({
                 user: ${{ github.actor }},
                 repo: ${{ github.repository }},
@@ -43,4 +43,4 @@ jobs:
                 message: "Latest build",
                 object: ${{ github.sha }},
                 type: "commit"
-            })
+          });
