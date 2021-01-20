@@ -38,6 +38,6 @@ jobs:
             github.git.createTag({
               tag: "latest",
               message: "Latest build",
-              object: context.ref,
+              object: context.sha,
               type: "commit",
             })
