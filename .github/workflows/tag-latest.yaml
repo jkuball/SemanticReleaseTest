@@ -33,6 +33,11 @@ jobs:
       # should tag the current commit because the build ran and the commit wasn't already tagged
       - uses: actions/github-script@v3
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            console.log(github.git.createTag)
+            github.git.createTag({
+              tag: "latest"
+              message: "Latest build"
+              object: context.ref
+              type: "commit"
+            })
