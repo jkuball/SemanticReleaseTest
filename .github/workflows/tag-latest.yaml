@@ -1,0 +1,45 @@
+name: tag latest
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      # - uses: actions/checkout@v2
+      #   with:
+      #     fetch-depth: 0
+
+      # # should explode if the current commit is already tagged
+      # - uses: actions/github-script@v3
+      #   with:
+      #     github-token: ${{secrets.GITHUB_TOKEN}}
+      #     script: |
+      #       github.issues.createComment({
+      #         issue_number: context.issue.number,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         body: '👋 Thanks for reporting!'
+      #       })
+
+      - name: Build
+        run: |
+          echo This should run if the current commit is not already tagged
+
+      # should tag the current commit because the build ran and the commit wasn't already tagged
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.gitdata.createTag({
+                user: ${{ github.actor }},
+                repo: ${{ github.repository }},
+                tag: "latest",
+                message: "Latest build",
+                object: ${{ github.sha }},
+                type: "commit"
+            })
