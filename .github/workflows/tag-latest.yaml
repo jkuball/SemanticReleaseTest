@@ -1,8 +1,8 @@
 name: tag latest
 
-on:
-  schedule:
-    - cron: '1 * * * *'
+#on:
+#  schedule:
+#    - cron: '1 * * * *'
 
 
 jobs:
