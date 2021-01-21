@@ -9,8 +9,6 @@ jobs:
       conclusion: ${{ steps.tag.outputs.conclusion }}
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - id: tag
         name: Check if tag already exists at the current commit
