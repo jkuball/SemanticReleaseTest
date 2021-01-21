@@ -28,7 +28,7 @@ jobs:
   build_and_tag:
     needs: check
     runs-on: ubuntu-latest
-    if: needs.check.output.conclusion == 'success'
+    if: needs.check.outputs.conclusion == 'success'
     steps:
       - uses: actions/checkout@v2
         with:
