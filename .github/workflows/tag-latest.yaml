@@ -15,15 +15,14 @@ jobs:
       - id: tag
         name: Check if tag already exists at the current commit
         run: |
+          echo ::set-output name=conclusion::success
           if [ ! -z "`git tag -l nightly`" ]; then
             sha=`git rev-parse nightly`
             if [ "$sha" == "${{ github.sha }}" ]; then
               echo "Tag already exists on the commit that triggered this workflow."
               echo ::set-output name=conclusion::failure
-              exit
             fi
           fi
-          echo ::set-output name=conclusion::success
 
   build_and_tag:
     needs: check
