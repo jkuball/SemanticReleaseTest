@@ -23,6 +23,7 @@ jobs:
             if [ "$sha" == "${{ github.sha }}" ]; then
               echo "Tag already exists on the commit that triggered this workflow."
               echo ::set-output name=conclusion::failure
+              exit 0
             fi
           fi
           echo ::set-output name=conclusion::success
