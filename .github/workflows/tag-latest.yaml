@@ -2,8 +2,7 @@ name: tag latest
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
-
+    - cron: "*/5 * * * *"
 
 jobs:
   check:
@@ -19,8 +18,8 @@ jobs:
         name: Check if tag already exists at the current commit
         run: |
           echo ::set-output name=conclusion::success
-          if [ ! -z "`git tag -l nightly`" ]; then
-            sha=`git rev-parse nightly`
+          if [ ! -z "`git tag -l Nightly`" ]; then
+            sha=`git rev-parse Nightly`
             if [ "$sha" == "${{ github.sha }}" ]; then
               echo "Tag already exists on the commit that triggered this workflow."
               echo ::set-output name=conclusion::failure
@@ -40,9 +39,13 @@ jobs:
         run: |
           echo This should run if the current commit is not already tagged
 
-      # should tag the current commit because the build ran and the commit wasn't already tagged
-      - name: Tag
-        run: |
-          [ ! -z "`git tag -l nightly`" ] && git tag -d nightly && git push --delete origin nightly
-          git tag nightly
-          git push origin nightly
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Nightly
+          body: Latest nightly build.
+          prerelease: true
